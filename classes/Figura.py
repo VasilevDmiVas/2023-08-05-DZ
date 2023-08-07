@@ -1,0 +1,6 @@
+class Figura:
+    def __init__(self):
+        ...
+
+    def get_count_p(self):
+        ...
