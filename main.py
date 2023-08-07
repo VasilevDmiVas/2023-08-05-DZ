@@ -1,42 +1,26 @@
-class animal:
-    def __init__(self, name, color):
-        self.name = name
-        self.color = color
-class cat(animal):
-    def __int__(self, name, color, voice):
-        super().__int__(name, color)
-        self.voice = voice
+from classes.Stroka import Stroka
+from classes.Spisok import Spisok
 
-    def gate_name(self):
-        return self.name
+def dlinaS(some_objekt):
+    return some_objekt.dlinaStroka()
 
-    def set_name(self, name):
-        if name != '':
-            self.name = name
+def inStrokaS(some_objekt):
+    return some_objekt.inStroka()
 
-    def __str__(self):
-        return f'Кличка животного: {self.name} Цвет животного: {self.color} Голос животного: Мяу'
+def zamenaStroka(some_objekt):
+    return some_objekt.zamenaStroka()
 
-class dog(animal):
-    def __int__(self, name, color, voice):
-        super().__int__(name, color)
-        self.voice = voice
+def dobavlenieSpisok(some_objekt):
+    return some_objekt.dobavlenieSpisok()
 
-    def gate_voice(self):
-        return self.voice
+stroka = Stroka('Privet mir', 'p', 'P', 'D')
+spisok = Spisok(['Привет мир', 12, 15, 'Мир рухнул'], 12, 1)
 
-    def gate_name(self):
-        return self.name
-
-    def set_name(self, name):
-        if name != '':
-            self.name = name
-
-    def __str__(self):
-        return f'Кличка животного: {self.name} Цвет животного: {self.color} Голос животного: Гав'
+print(spisok)
+print('--------------------------------------------------------------------------------------------------------')
+print(stroka)
+# print(dlinaS(spisok))
+# print(inStrokaS(spisok))
+# print(zamenaStroka(stroka))
 
 
-cat1 = cat('Барсик', 'Белый')
-dog1 = dog('Жучка', 'Белый')
-print(cat1, end='\n')
-print(dog1)
